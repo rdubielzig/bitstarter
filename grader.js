@@ -74,8 +74,6 @@ if( require.main == module ) {
 	.option('-u, --url <url>', 'URL of HTML file to check')
 	.parse(process.argv);
 
-    console.log("cmd.file is %s and cmd.url is %s", cmd.file, cmd.url);
-
     if (cmd.url) {
 	checkHtmlFile(cmd.url, cmd.checks, true);
     } else if (cmd.file) {
@@ -87,4 +85,3 @@ if( require.main == module ) {
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
-    
